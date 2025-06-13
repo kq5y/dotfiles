@@ -1,0 +1,3 @@
+abbr "dc"="docker compose"
+abbr "ex"="exit"
+abbr "upy"="uv run python"
