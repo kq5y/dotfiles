@@ -6,4 +6,4 @@
 	path = ~/.config/git/config.private
 
 [core]
-	editor = vim
+	editor = nvim
