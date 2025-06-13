@@ -4,6 +4,12 @@
 
 !.gitignore
 
+!.zshrc
+!.p10k.zsh
+
+!scripts
+!scripts/**/*
+
 !.config
 
 !.config/git
