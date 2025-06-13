@@ -1,0 +1,7 @@
+[commit]
+	gpgsign = true
+[tag]
+	gpgSign = true
+[include]
+	path = ~/.config/git/config.private
+
