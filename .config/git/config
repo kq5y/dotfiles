@@ -5,3 +5,5 @@
 [include]
 	path = ~/.config/git/config.private
 
+[core]
+	editor = vim
