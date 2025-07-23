@@ -1,3 +1,6 @@
 abbr "dc"="docker compose"
+abbr "dlog"="docker compose logs --tail=\"all\""
+abbr "dup"="docker compose up -d --build"
 abbr "ex"="exit"
+abbr "g"="git"
 abbr "upy"="uv run python"
