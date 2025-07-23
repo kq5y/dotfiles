@@ -1,3 +1,7 @@
+if [[ -z "$ZELLIJ" ]]; then
+  exec zellij attach dev || exec zellij --session dev
+fi
+
 export GPG_TTY=$(tty)
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -40,18 +44,4 @@ esac
 # pnpm end
 
 eval "$(/home/kq5y/.local/bin/mise activate zsh)"
-
-# Startup Terminal Multiplexer
-TERMINAL_MULTIPLEXER="zellij"
-if [ "$TERMINAL_MULTIPLEXER" = "zellij" ]; then
-  if command -v zellij >/dev/null 2>&1 && [ -z "$ZELLIJ_SESSION_NAME" ]; then
-    zellij attach --create dev
-    exit
-  fi
-elif [ "$TERMINAL_MULTIPLEXER" = "tmux" ]; then
-  if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
-    tmux attach -t dev || tmux new -s dev
-    exit
-  fi
-fi
 
