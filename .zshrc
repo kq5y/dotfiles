@@ -31,6 +31,27 @@ alias "lt"="lsd --tree"
 
 alias "cat"="batcat"
 
-alias "sage"="docker run -it sagemath/sagemath:latest"
+# pnpm
+export PNPM_HOME="/home/kq5y/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
 
+eval "$(/home/kq5y/.local/bin/mise activate zsh)"
+
+# Startup Terminal Multiplexer
+TERMINAL_MULTIPLEXER="zellij"
+if [ "$TERMINAL_MULTIPLEXER" = "zellij" ]; then
+  if command -v zellij >/dev/null 2>&1 && [ -z "$ZELLIJ_SESSION_NAME" ]; then
+    zellij attach --create dev
+    exit
+  fi
+elif [ "$TERMINAL_MULTIPLEXER" = "tmux" ]; then
+  if command -v tmux >/dev/null 2>&1 && [ -z "$TMUX" ]; then
+    tmux attach -t dev || tmux new -s dev
+    exit
+  fi
+fi
 

@@ -5,15 +5,22 @@
 !.gitignore
 
 !.zshrc
+!.zprofile
 !.p10k.zsh
 
 !scripts
 !scripts/**/*
 
+!utils
+!utils/**/*
+
 !.config
 
 !.config/git
 !.config/git/config
+
+!.config/mise
+!.config/mise/config.toml
 
 !.config/nvim
 !.config/nvim/**/*
@@ -23,6 +30,11 @@
 
 !.config/tmux
 !.config/tmux/tmux.conf
+
+!.config/zellij
+!.config/zellij/config.kdl
+!.config/zellij/layouts
+!.config/zellij/layouts/default.kdl
 
 !.config/zsh-abbr
 !.config/zsh-abbr/user-abbreviations
