@@ -1,0 +1,11 @@
+[tools]
+go = "latest"
+node = "latest"
+"npm:@hrzn/cli" = "latest"
+"npm:pnpm" = "latest-10"
+python = "latest"
+uv = "latest"
+zellij = "latest"
+
+[settings]
+idiomatic_version_file_enable_tools = ["python"]
