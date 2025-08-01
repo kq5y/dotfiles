@@ -1,5 +1,7 @@
-if [[ -z "$ZELLIJ" ]]; then
-  exec zellij attach dev || exec zellij --session dev
+if [ "$VSCODE_PID" = "" ] && [ "$TERM_PROGRAM" != "vscode" ]; then
+  if [[ -z "$ZELLIJ" ]]; then
+    exec zellij attach dev || exec zellij --session dev
+  fi
 fi
 
 export GPG_TTY=$(tty)
