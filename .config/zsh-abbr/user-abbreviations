@@ -1,3 +1,4 @@
+abbr "cl"="clear"
 abbr "dc"="docker compose"
 abbr "dlog"="docker compose logs --tail=\"all\""
 abbr "dup"="docker compose up -d --build"
