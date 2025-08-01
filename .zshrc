@@ -37,6 +37,10 @@ alias "lt"="lsd --tree"
 
 alias "cat"="batcat"
 
+function mcd() {
+  mkdir -p "$1" && cd "$1";
+}
+
 # pnpm
 export PNPM_HOME="/home/kq5y/.local/share/pnpm"
 case ":$PATH:" in
